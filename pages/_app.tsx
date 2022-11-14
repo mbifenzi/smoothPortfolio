@@ -13,8 +13,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Navbar />
       <Header />
       <About />
-      {/* <Projects />
-      <Contact /> */}
+      <Projects />
+      {/* <Contact /> */}
       <Component {...pageProps} />
     </>
   )
