@@ -26,3 +26,10 @@
     font-display: swap;
     src: url('../fonts/Paragraphs.woff2') format('woff2')
     }
+@font-face {
+    font-family: 'bifinal';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../fonts/final.woff2') format('woff2')
+    }
