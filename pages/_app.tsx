@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Header />
       <About />
       <Projects />
-      {/* <Contact /> */}
+      <Contact />
       <Component {...pageProps} />
     </>
   )
