@@ -7,15 +7,17 @@ import Projects from '../components/Projects.jsx'
 import Contact from '../components/Contact'
 
 
+
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Navbar />
-      <Header />
-      <About />
-      <Projects />
-      <Contact />
-      <Component {...pageProps} />
-    </>
+    <div className='w-full'>
+        {/* <Navbar /> */}
+        <Header />
+        <About />
+        <Projects />
+        <Contact />
+        {/* <Component {...pageProps} /> */}
+    </div>
   )
 }

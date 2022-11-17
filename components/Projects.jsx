@@ -1,7 +1,8 @@
 import React from 'react'
-import { FaReact } from 'react-icons/fa'
+import Project from './Project'
 import Image from 'next/image'
 import Link from 'next/link'
+
 
 const listOfProjects = [
   {
@@ -70,8 +71,6 @@ const listOfProjects = [
   },
 ]
 
-
-
 const Projects = () => {
   return (
     <div className='h-fit md:h-sreen bg-red-100'>
@@ -82,7 +81,7 @@ const Projects = () => {
         
         <div className='flex flex-wrap sm:flex-row justify-center items-center '>
           {listOfProjects.map((project) => (
-              <Link href={"/alo"} className="border-black border-2 bg-red-200 rounded-xl m-5 sm:w-2/5 w-2/3 md:w-1/4 h-96 hover:scale-105 transition duration-300  text-justify">
+              <Link href={`${Project.name}`} className="bg-black bg-opacity-10 hover:bg-opacity-20 shadow-2xl rounded-xl m-5 sm:w-2/5 w-2/3 md:w-1/4 h-96 hover:scale-105 transition duration-300  text-justify">
               <div className=''>
                 <Image src={project.image} alt='project' width={500} height={500} className="rounded-t-lg"/>
                 <h1 className='font-bold text-center border-black border-b-2'>
@@ -90,7 +89,7 @@ const Projects = () => {
                 </h1>
 
                 <div className=''>
-                 <h1 className=''>Skills used :</h1>  
+                 <h1 className=''>Skills used :</h1> 
                  <div className='flex flex-wrap space-x-10 justify-center'>
                   {project.technologies.map((tech) => (
                     <div className=''>

@@ -33,3 +33,9 @@
     font-display: swap;
     src: url('../fonts/final.woff2') format('woff2')
     }
+
+html,body{
+    overflow-x: hidden;
+    color: black;
+    
+}

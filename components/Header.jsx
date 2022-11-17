@@ -2,6 +2,9 @@ import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/meditating-man.json";
 import { motion as m } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+
 function CoronaVirus() {
   const defaultOptions = {
     loop: true,
@@ -18,26 +21,46 @@ function CoronaVirus() {
 const Header = () => {
   return (
     <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="h-fit w-full bg-orange-100">
-        <div className="hidden w-full sm:h-2/3 h-20 sm:flex  justify-center items-center">
+      <div className=" h-screen w-full bg-orange-100 flex flex-col">
+        <div className="flex justify-start pt-5">
+          <ul className="flex gap-4 justify-center items-center ">
+            <Link href={"/"}>
+              <li className="">
+                <Image
+                  src="/assets/logos/mb.png"
+                  alt="logo"
+                  width={60}
+                  height={50}
+                />
+              </li>
+            </Link>
+            <Link href={"#about"}>
+              {" "}
+              <li>About</li>{" "}
+            </Link>
+            <Link href={"#projects"}>
+              {" "}
+              <li>Projects</li>{" "}
+            </Link>
+            <Link href={"#contact"}>
+              {" "}
+              <li>Contact</li>{" "}
+            </Link>
+          </ul>
+        </div>
+        <div className="hidden w-full sm:flex justify-center items-center">
           <CoronaVirus />
         </div>
-        <div className=" sm:h-fit h-full flex sm:flex-row flex-col justify-end items-end pb-6">
-          <div className="w-full flex flex-col ">
+        <div className="h-full flex sm:flex-row flex-col justify-end sm:items-end sm:justify-end items-start">
+          <div className="">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className=" md:text-[300px] text-[150px] font-bold font-[bifHeader]  leading-[200px]"
+              className=" md:text-[200px] text-[150px] font-bold font-[bifHeader] leading-tight overflow-hidden "
             >
               CREATIVE
-            </m.h1>
-            <m.h1
-              animate={{ y: 0 }}
-              initial={{ y: "100%" }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="md:text-[300px] text-[150px] font-bold font-[bifHeader]"
-            >
+              <br />
               DEVELOPER
             </m.h1>
           </div>
@@ -46,15 +69,13 @@ const Header = () => {
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-justify p-2 sm:pb-24 pb-0"
-            >
+              className="text-justify p-2 sm:pb-10 pb-0">
               I AM A DEVELOPER AND UX/UI DESIGNER BASED IN MOROCCO. I HAVE MANY
               YEARS OF EXPERIENCE IN CONSULTING IN ALL AREAS OF DIGITAL. I LOVE
               MEDITATION, MINIMALISM IS MY RELIGION.
             </m.h1>
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
       </div>
     </m.div>
