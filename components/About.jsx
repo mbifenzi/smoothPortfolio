@@ -30,8 +30,8 @@ function CoronaVirus() {
 
 const About = () => {
   return (
-    <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div id='about' className='w-full h-fit sm:h-screen flex flex-col justify-center items-center bg-pink-100 snap-center'>
+    <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className= "w-full h-fit sm:h-screen flex flex-col justify-center items-center bg-pink-100 snap-start">
+      <div id='about' className='container mx-auto'>
         <div className='  flex flex-col sm:flex-row justify-center items-center pt-36 sm:pt-0'>
           <div className=" p-6 sm:w-1/2 w-full" >
             <div className='w-fit pb-10'>

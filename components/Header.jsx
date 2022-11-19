@@ -20,9 +20,9 @@ function CoronaVirus() {
 
 const Header = () => {
   return (
-    <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className=" snap-start h-screen w-full bg-orange-100 flex flex-col">
-        <div className="flex justify-start pt-5">
+    <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="snap-start h-screen w-full bg-orange-100 flex flex-col items-center">
+      <div className="container mx-auto h-screen flex flex-col justify-between align-start">
+        <div className="flex justify-start h-fit pt-5 ">
           <ul className="flex gap-4 justify-center items-center ">
             <Link href={"/"}>
               <li className="">
@@ -48,34 +48,33 @@ const Header = () => {
             </Link>
           </ul>
         </div>
-        <div className="hidden w-full sm:flex justify-center items-center">
+        <div className="hidden h-fit w-full sm:flex justify-center items-center">
           <CoronaVirus />
         </div>
-        <div className="h-full flex sm:flex-row flex-col justify-end sm:items-end sm:justify-end items-start">
+        <div className=" flex sm:flex-row flex-col justify-end sm:items-end sm:justify-end items-start">
           <div className="">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className=" md:text-[200px] text-[150px] font-bold font-[bifHeader] leading-tight overflow-hidden "
+              className=" md:text-[200px] text-[150px] font-bold font-[bifHeader]  overflow-hidden "
             >
               CREATIVE
               <br />
               DEVELOPER
             </m.h1>
           </div>
-          <div className="flex justify-start items-start overflow-hidden">
+          <div className="flex justify-start items-start pb-6 overflow-hidden">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-justify p-2 sm:pb-10 pb-0">
+              className="text-justify  sm:pb-10 pb-0">
               I AM A DEVELOPER AND UX/UI DESIGNER BASED IN MOROCCO. I HAVE MANY
               YEARS OF EXPERIENCE IN CONSULTING IN ALL AREAS OF DIGITAL. I LOVE
               MEDITATION, MINIMALISM IS MY RELIGION.
             </m.h1>
           </div>
-          <div></div>
         </div>
       </div>
     </m.div>

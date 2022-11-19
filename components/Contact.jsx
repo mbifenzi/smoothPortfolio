@@ -11,6 +11,7 @@ import { FaInstagram as InstagramLogo } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="snap-start w-full h-fit sm:h-screen bg-slate-200 flex md:flex-row flex-col md:justify-end md:items-end ">
+      <div className="container mx-auto">
       <div className="">
         <m.h1
           animate={{ y: 0 }}
@@ -36,6 +37,7 @@ const Contact = () => {
         <div className="flex justify-center items-center" >
           <a className="border-black border-2 rounded-2xl my-20 p-2 hover:text-white hover:bg-black hover:bg-opacity-30 duration-300" href="mailto:bifenziapple@gmail.com">Contact me</a>
         </div>
+      </div>
       </div>
     </div>
   );

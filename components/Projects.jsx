@@ -89,7 +89,7 @@ const Projects = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper h-screen w-full"
+        className="mySwiper h-screen w-full container mx-auto"
       >
         {listOfProjects.map((project) => (
           <SwiperSlide className="">
