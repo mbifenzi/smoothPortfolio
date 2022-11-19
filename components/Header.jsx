@@ -21,7 +21,7 @@ function CoronaVirus() {
 const Header = () => {
   return (
     <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className=" h-screen w-full bg-orange-100 flex flex-col">
+      <div className=" snap-start h-screen w-full bg-orange-100 flex flex-col">
         <div className="flex justify-start pt-5">
           <ul className="flex gap-4 justify-center items-center ">
             <Link href={"/"}>

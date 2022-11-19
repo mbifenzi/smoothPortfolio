@@ -10,7 +10,7 @@ import { FaInstagram as InstagramLogo } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="w-full h-fit sm:h-screen bg-slate-200 flex md:flex-row flex-col md:justify-end md:items-end ">
+    <div className="snap-start w-full h-fit sm:h-screen bg-slate-200 flex md:flex-row flex-col md:justify-end md:items-end ">
       <div className="">
         <m.h1
           animate={{ y: 0 }}

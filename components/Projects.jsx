@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Link from "next/link";
 const listOfProjects = [
   {
     name: "ft-containers",
@@ -81,7 +82,7 @@ const listOfProjects = [
 
 const Projects = () => {
   return (
-    <div className="h-screen bg-red-100 flex justify-center items-center">
+    <div className="snap-start h-screen bg-red-100 flex justify-center items-center">
       <Swiper
         pagination={{
           type: "progressbar",
@@ -91,12 +92,13 @@ const Projects = () => {
         className="mySwiper h-screen w-full"
       >
         {listOfProjects.map((project) => (
-          <SwiperSlide className="flex justify-center items-center">
-            <div className="w-2/3 h-fit flex flex-col justify-center items-center hover:scale-105 transition duration-500
-             bg-black bg-opacity-10 hover:bg-opacity-20 shadow-2xl rounded-b-2xl">
+          <SwiperSlide className="">
+            <div className="w-full h-full flex flex-col justify-center items-center ">
+            <Link className="flex justify-center items-center flex-col w-2/3 h-fit hover:scale-105 transition duration-500
+             bg-black bg-opacity-10 hover:bg-opacity-20 shadow-2xl rounded-b-2xl" href={`${project.name}`}>
               <img src={project.image} alt="item" className="w-full" />
               <div className="w-full">
-                <div className="w-full border-2 border-black">
+                <div className="w-full border-b-2 border-black">
                   <h3 className="text-center font-bold text-xl">{project.name}</h3>
                 </div>
                 <p>{project.description}</p>
@@ -107,6 +109,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
+          </Link>
             </div>
           </SwiperSlide>
         ))}
