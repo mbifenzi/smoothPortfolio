@@ -10,21 +10,14 @@ import { FaInstagram as InstagramLogo } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="snap-start w-full h-fit sm:h-screen bg-slate-200 flex md:flex-row flex-col md:justify-end md:items-end ">
-      <div className="container mx-auto">
-      <div className="">
-        <m.h1
-          animate={{ y: 0 }}
-          initial={{ y: "100%" }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className=" text-[150px] sm:text-[200px]  font-bold font-[bifHeader] "
-        >
+    <div id="contact" className="snap-start w-full h-fit sm:h-screen bg-slate-200 flex md:flex-row flex-col justify-center md:justify-end md:items-end ">
+      <div className="container mx-auto flex flex-col md:flex-row">
+        <h1 className=" text-[150px] sm:text-[200px] font-bold font-[bifHeader] leading-tight ">
           LET'S <br /> CONNECT
-        </m.h1>
-      </div>
+        </h1>
       {/* <div className=""></div> */}
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="w-full flex gap-x-10 justify-center items-center">
+        <div className="w-full flex gap-x-10 flex-wrap justify-center items-center">
           <GithubLogo className="text-white w-16 h-16 text-5xl rounded-full p-2 hover:text-black \
                       bg-black border border-white-5  hover:bg-opacity-30 hover:rotate-[360deg] transition duration-700"/>
           <TwitterLogo className="text-white w-16 h-16 text-5xl rounded-full p-2 hover:text-black \

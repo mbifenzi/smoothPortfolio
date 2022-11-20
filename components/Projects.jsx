@@ -82,7 +82,7 @@ const listOfProjects = [
 
 const Projects = () => {
   return (
-    <div className="snap-start h-screen bg-red-100 flex justify-center items-center">
+    <div className="snap-start h-screen bg-red-100 flex justify-center items-center scroll-smooth" id="projects">
       <Swiper
         pagination={{
           type: "progressbar",
