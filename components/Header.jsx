@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="snap-start h-screen box-border w-full bg-orange-100 flex flex-col items-center">
       <div className="container mx-auto h-screen flex flex-col justify-between align-start">
-        <m.div animate={{x:0}} initial={{x:-200}} transition={{ duration:1.2 }} className=" z-50 sticky flex justify-start h-fit pt-5 ">
+        <m.div animate={{x:0}} initial={{x:-200}} transition={{ duration:1.2 }} className=" w-full flex justify-start h-fit pt-5 ">
           <ul className="flex gap-4 justify-center items-center ">
             <Link href={"/"}>
               <li className="">

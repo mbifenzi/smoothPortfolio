@@ -13,7 +13,7 @@ const Contact = () => {
     <div id="contact" className="snap-start w-full h-fit sm:h-screen bg-slate-200 flex md:flex-row flex-col justify-center md:justify-end md:items-end ">
       <div className="container mx-auto flex flex-col md:flex-row">
         <h1 className=" text-[150px] sm:text-[200px] font-bold font-[bifHeader] leading-tight ">
-          LET'S <br /> CONNECT
+          LET&apos;S <br /> CONNECT
         </h1>
       {/* <div className=""></div> */}
       <div className="w-full flex flex-col justify-center items-center">
