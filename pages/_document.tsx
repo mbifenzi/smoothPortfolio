@@ -10,6 +10,7 @@ export default function Document() {
         <Html>
             <Head>
                 <link rel="shortcut icon" href="/favicon.ico" />
+                <title>Mbifenzi</title>
             </Head>
             <body>
                 <Main />
