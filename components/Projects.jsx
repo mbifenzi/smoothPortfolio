@@ -103,7 +103,7 @@ const Projects = () => {
           <SwiperSlide key={project.id} className="">
             <div key={project.id} className="w-full h-full flex flex-col justify-center items-center ">
             <Link className="flex justify-center items-center flex-col w-2/3 h-fit hover:scale-105 transition duration-500
-             bg-black bg-opacity-10 hover:bg-opacity-20 shadow-2xl rounded-b-2xl" href={`${project.name}`}>
+             bg-black bg-opacity-10 hover:bg-opacity-20 shadow-2xl rounded-b-2xl" href="project">
               <Image src={project.image} alt="item" width={500} height={500} className="w-full" />
               <div className="w-full">
                 <div className="w-full border-b-2 border-black">

@@ -43,7 +43,7 @@ const About = () => {
               <h1 className="text-8xl font-bold font-[bifHeader] text-left-10 text-justify">HELLO I AM BIFENZI</h1>
               <h5 className='text-right font-[bifParagraph]'>mohamed bifenzi</h5>
             </div>
-            <h1 className=" md:text-xl sm:text-lg text-left font-normal">I AM A FRONT-END DEVELOPER AND UX/UI DESIGNER AND A STUDENT AT @1337 LOCATED IN MOROCCO, I THOROUGHLY ENJOY CREATING NEW THINGS AND I AM ALWAYS LOOKING FOR NEW CHALLENGES, SEEING IDEAS AND CONCEPTS COME TO LIFE IS ONE OF MY FAVORITE PARTS OF THE DEVELOPMENT PROCESS.</h1>
+            <h1 className=" md:text-xl sm:text-lg text-left font-normal">I AM A FRONT-END DEVELOPER AND UX/UI DESIGNER AND A STUDENT AT <a href="https://www.1337.ma">@1337</a> LOCATED IN MOROCCO, I THOROUGHLY ENJOY CREATING NEW THINGS AND I AM ALWAYS LOOKING FOR NEW CHALLENGES, SEEING IDEAS AND CONCEPTS COME TO LIFE IS ONE OF MY FAVORITE PARTS OF THE DEVELOPMENT PROCESS.</h1>
           </m.div>
           <m.div initial={{ x: 200 }} whileInView={{ x: 0 }} viewport={{once:true}} transition={{ duration: 1.2 }}
            className="w-full sm:w-1/2 h-full flex justify-center items-center">

@@ -14,7 +14,6 @@ function CoronaVirus() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-
   return <Lottie options={defaultOptions} height={400} width={400} />;
 }
 
@@ -53,14 +52,14 @@ const Header = () => {
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ duration:1.2 }}
-              className=" md:text-[200px] text-[150px] font-bold font-[bifHeader]  overflow-hidden "
+              className=" md:text-[200px] text-[150px] font-bold font-[bifHeader] leading-tight  overflow-hidden "
             >
               CREATIVE
               <br />
               DEVELOPER
             </m.h1>
           </div>
-          <div className="flex justify-start items-start pb-6 px-2 overflow-hidden">
+          <div className="flex justify-start items-start  px-2 overflow-hidden">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}

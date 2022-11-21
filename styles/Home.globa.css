@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'BifHeader';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/bifHeader.woff2') format('woff2')
+}
+
+@font-face {
+    font-family: 'BifHeads';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    font-size: larger; 
+    src: url('../fonts/heads.woff2') format('woff2')
+    }
+
+@font-face {
+    font-family: 'bifParagraph';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../fonts/Paragraphs.woff2') format('woff2')
+    }
+@font-face {
+    font-family: 'bifinal';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../fonts/final.woff2') format('woff2')
+    }
+
+html,body{
+    overflow-x: hidden;
+    color: black;
+    scroll-behavior: smooth ;
+}
+*{
+    scroll-behavior: smooth ;
+}
