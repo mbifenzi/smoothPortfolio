@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion as m } from "framer-motion";
 import Lottie from "react-lottie";
 import { DiGithubAlt as GithubLogo } from "react-icons/di";
@@ -25,7 +25,7 @@ const Contact = () => {
     <div id="contact" className="snap-start w-full h-fit sm:h-screen bg-slate-200">
       <div className="container mx-auto flex h-full flex-col justify-around align-start">
         <m.div initial={{y:+200}} whileInView={{y:0}} viewport={{once:true}} transition={{ duration: 1.2 }} className="flex justify-center items-center">
-          <Image src="/assets/lottie/contact-us.gif" width={400} height={400} />
+          <CoronaVirus />
         </m.div>
         <div className="flex flex-col md:flex-row">
           <m.h1 initial={{x:-200}} whileInView={{x:0}} viewport={{once:true}} transition={{ duration: 1.2 }} className="  text-[150px] sm:text-[200px] font-bold font-[bifHeader] leading-tight ">
