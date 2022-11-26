@@ -21,11 +21,32 @@ function CoronaVirus() {
 
 const Project = () => {
   return (
-    <div  className='bg-red-400 mx-auto h-screen w-full snap-start w-fit flex justify-center items-center'>
-      <div data-aos="fade-right">
-        <CoronaVirus />
+   <>
+      <div
+        className='w-full h-screen text-center items-center'
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        {/* <CoronaVirus /> */}
+        test
       </div>
-    </div>
+      <div className='w-full h-screen text-center'
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center" >
+        test2
+      </div>
+      </>
   )
 }
 

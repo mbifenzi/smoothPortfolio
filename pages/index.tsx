@@ -12,7 +12,9 @@ export default function Home() {
     <div>
       <Head>
         <title>MBifenzi</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </Head>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <Header />
       <About />
       <Projects />
