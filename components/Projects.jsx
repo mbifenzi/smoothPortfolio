@@ -105,7 +105,7 @@ const Projects = () => {
             <Link className="flex justify-center items-center flex-col w-2/3 h-fit hover:scale-105 transition duration-500
              bg-black bg-opacity-10 hover:bg-opacity-20 shadow-2xl rounded-b-2xl" href="project">
               <Image src={project.image} alt="item" width={500} height={500} className="w-full" />
-              <div className="w-full">
+              <div key={project.id} className="w-full">
                 <div className="w-full border-b-2 border-black">
                   <h3 className="text-center font-bold text-xl">{project.name}</h3>
                 </div>
@@ -113,7 +113,7 @@ const Projects = () => {
                 <h4 className="font-bold">SKILLS USED :</h4>
                 <div className="flex flex-wrap space-x-10 justify-center  ">
                   {project.technologies.map((technology) => (
-                    <span key={project.key} className="">{technology}</span>
+                    <span  className="">{technology}</span>
                   ))}
                 </div>
               </div>

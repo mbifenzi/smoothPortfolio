@@ -20,7 +20,7 @@ function CoronaVirus() {
 
 const Project = () => {
   return (
-    <div className='container bg-red-400 mx-auto h-screen snap-start w-full flex justify-center items-center'>
+    <div data-aos="fade-right" className='container bg-red-400 mx-auto h-screen snap-start w-full flex justify-center items-center'>
       <CoronaVirus />
     </div>
   )
