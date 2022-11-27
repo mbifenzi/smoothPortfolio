@@ -21,32 +21,20 @@ function CoronaVirus() {
 
 const Project = () => {
   return (
-   <>
-      <div
-        className='w-full h-screen text-center items-center'
-        data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top-center">
-        {/* <CoronaVirus /> */}
-        test
+    <>
+      <div className='w-full text-center items-center'>
+        <div className='h-screen'>
+          <p data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" className='text-4xl'>twista</p>
+        </div>
+        <div className='h-screen'>
+          <p data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" className='text-4xl'>twisto</p>
+        </div>
       </div>
-      <div className='w-full h-screen text-center'
-        data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top-center" >
-        test2
-      </div>
-      </>
+    </>
   )
 }
 

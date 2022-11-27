@@ -11,14 +11,20 @@ export default function App({ Component, pageProps }: AppProps) {
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   useEffect(() => {
     AOS.init({
-      easing: "ease-out-cubic",
-      once: true,
+      once: false,
       offset: 50,
-    });
+      duration: 500,
+      easing: 'ease-in-out',
+      delay: 100,
+      
+    }
+    );
   }, []);
-  return (
-    <div className='snap-y snap-mandatory overflow-scroll w-screen h-screen'>
-        <Component {...pageProps} />
-    </div>
-  )
+
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
+  
+  return <Component {...pageProps} />
+
 }

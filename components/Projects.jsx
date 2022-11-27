@@ -97,8 +97,7 @@ const Projects = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper h-screen w-full container mx-auto"
-      >
+        className="mySwiper h-screen w-full container mx-auto" data-aos="flip-left">
         {listOfProjects.map((project) => (
           <SwiperSlide key={project.id} className="">
             <div key={project.id} className="w-full h-full flex flex-col justify-center items-center ">
