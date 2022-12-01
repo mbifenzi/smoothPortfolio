@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Link from "next/link";
+
 const listOfProjects = [
   {
     id: 1,
@@ -90,14 +91,14 @@ const listOfProjects = [
 
 const Projects = () => {
   return (
-    <div className="snap-start h-screen bg-red-100 flex justify-center items-center scroll-smooth" id="projects">
+    <div className="h-screen bg-red-100 flex justify-center items-center" id="projects">
       <Swiper
         pagination={{
           type: "progressbar",
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper h-screen w-full container mx-auto" data-aos="flip-left">
+        className="mySwiper h-screen w-full container mx-auto scroll-smooth" data-aos="zoom-out">
         {listOfProjects.map((project) => (
           <SwiperSlide key={project.id} className="">
             <div key={project.id} className="w-full h-full flex flex-col justify-center items-center ">

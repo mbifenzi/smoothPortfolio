@@ -19,7 +19,7 @@ function CoronaVirus() {
 
 const Header = () => {
   return (
-    <div className="snap-start h-screen box-border w-full bg-orange-100 flex flex-col items-center">
+    <div className="h-screen box-border w-full bg-orange-100 flex flex-col items-center">
       <div className="container mx-auto h-screen flex flex-col justify-between align-start">
         <div className=" w-full flex justify-start h-fit pt-5 ">
           <ul data-aos="fade-right"

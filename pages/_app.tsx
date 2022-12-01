@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     AOS.init({
       duration: 700,
       delay: 50,
-      once: true,
+      once: false,
     })
     window.addEventListener('touchmove', () => {
       AOS.refresh()
