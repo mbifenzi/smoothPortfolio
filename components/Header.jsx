@@ -1,7 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/meditating-man.json";
-import { motion as m } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -35,7 +34,7 @@ const Header = () => {
                   height={50} />
               </li>
             </Link>
-            <Link href={"#about"} className="scroll-container">
+            <Link href={"#about"}>
               <li>About</li>
             </Link>
             <Link href={"#projects"}>

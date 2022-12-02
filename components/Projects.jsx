@@ -113,7 +113,7 @@ const Projects = () => {
                 <h4 className="font-bold">SKILLS USED :</h4>
                 <div className="flex flex-wrap space-x-10 justify-center  ">
                   {project.technologies.map((technology) => (
-                    <span  className="">{technology}</span>
+                    <span key={project.id}  className="">{technology}</span>
                   ))}
                 </div>
               </div>

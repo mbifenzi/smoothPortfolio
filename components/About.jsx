@@ -28,7 +28,7 @@ const About = () => {
 
   return (
     
-    <div className= "w-full h-fit sm:h-screen flex flex-col justify-center items-center bg-pink-100" id='about'>
+    <div className= "w-full h-fit sm:h-screen flex flex-col justify-center items-center bg-pink-100 scroll-smooth" id='about'>
       <div  className='container mx-auto'>
         <div className='  flex flex-col sm:flex-row justify-center items-center pt-36 sm:pt-0'>
           <div className=" p-6 sm:w-1/2 w-full" >
