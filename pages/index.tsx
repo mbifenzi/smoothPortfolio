@@ -2,7 +2,7 @@ import About from '../components/About'
 import Header from '../components/Header'
 import Projects from '../components/Projects.jsx'
 import Contact from '../components/Contact'
-
+import Project from '../components/Project'
 
 
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
+      {/* <Project /> */}
     </div>
   )
 }
