@@ -8,6 +8,7 @@ import Project from '../components/Project'
 export default function Home() {
   return (
     <div className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
+      
       <Header />
       <About />
       <Projects />
