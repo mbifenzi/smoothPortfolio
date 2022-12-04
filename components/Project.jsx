@@ -118,7 +118,7 @@ const Project = () => {
 
   return (
     <div id="projects" className={`bg-red-100 h-[110rem] md:h-screen w-screen flex justify-center items-center `}>
-      <section id="project" className="container mx-auto">
+      <section  data-aos="zoom-in"  className="container mx-auto">
         <div onClick={handleClick} className="card inactive">
           <div className="">
             <img src={listOfProjects[0].image} alt="project" />
