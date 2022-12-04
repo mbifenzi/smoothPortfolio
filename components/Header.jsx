@@ -25,7 +25,7 @@ const Header = () => {
             data-aos-easing="linear"
             data-aos-duration="1000"
             className="flex gap-4 justify-center items-center ">
-            <Link href={"/"}>
+            <Link href={"/"} >
               <li className="">
                 <Image
                   src="/assets/logos/mb.png"
@@ -34,13 +34,13 @@ const Header = () => {
                   height={50} />
               </li>
             </Link>
-            <Link href={"#about"}>
+            <Link href={"#about"} scroll={false}>
               <li>About</li>
             </Link>
-            <Link href={"#projects"}>
+            <Link href={"#projects"} scroll={false}>
               <li>Projects</li>
             </Link>
-            <Link href={"#contact"}>
+            <Link href={"#contact"} scroll={false}>
               <li>Contact</li>
             </Link>
           </ul>

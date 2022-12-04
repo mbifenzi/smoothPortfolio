@@ -117,7 +117,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div className={`bg-red-100 h-[102rem] md:h-screen w-screen flex justify-center items-center `}>
+    <div id="projects" className={`bg-red-100 h-[110rem] md:h-screen w-screen flex justify-center items-center `}>
       <section id="project" className="container mx-auto">
         <div onClick={handleClick} className="card inactive">
           <div className="">
