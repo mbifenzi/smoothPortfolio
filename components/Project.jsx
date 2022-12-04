@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { motion as m } from "framer-motion";
 import Lottie from "react-lottie";
 import { gsap } from "gsap/dist/gsap";
@@ -88,115 +88,114 @@ const listOfProjects = [
 // const activClass = "card grid grid-cols-1 grid-rows-1 gap-4 order-none h-auto";
 // const inactiveClass = "card col-span-2 row-span-2 order-1 h-100% ";
 const Project = () => {
-  const [isClicked, setIsClicked] = React.useState(false);
-  const handleClick = () => {
-    setIsClicked(!isClicked);
+
+  const CardsRef = useRef(null);
+  
+  const handleClick = (e) => {
+    const card = e.currentTarget;
+    
+    console.log("clicked");
+    
+    const state = Flip.getState(CardsRef.current);
+    const isCardActive = card.classList.contains("active");
+
+    CardsRef.current.forEach((otherCard, otherIndex) => {
+      otherCard.classList.remove("active");
+      otherCard.classList.remove("inactive");
+      if (!isCardActive && card !== otherCard) {
+        card.classList.add("inactive");
+      }
+    });
+    if (!isCardActive) {
+      card.classList.add("active");
+    }
+    Flip.from(state, { duration: 1, ease: "expo.out", absolute: true });
   };
 
   useEffect(() => {
-    const cards = document.querySelectorAll(".card");
-    cards.forEach((card, index) => {
-      card.addEventListener("click", () => {
-        console.log("clicked");
-        const state = Flip.getState(cards);
-
-        const isCardActive = card.classList.contains("active");
-        cards.forEach((otherCard, otherIndex) => {
-          otherCard.classList.remove("active");
-          otherCard.classList.remove("inactive");
-          if (!isCardActive && index !== otherIndex) {
-            card.classList.add("inactive");
-          }
-        });
-        if (!isCardActive) {
-          card.classList.add("active");
-        }
-        Flip.from(state, { duration: 1, ease: "expo.out", absolute: true });
-      });
-    });
-  }, [isClicked]);
+    CardsRef.current = document.querySelectorAll(".card");
+  }, []);
 
   return (
-    <section id="project" className="container mx-auto">
-      <div onClick={() => handleClick()} className="card ">
-        <div className="">
-          <img src={listOfProjects[0].image} alt="project" />
-          <h1 className="text-2xl font-bold text-center">
-            {listOfProjects[0].name}
-          </h1>
-        </div>
-        <p className="text-center">{listOfProjects[0].description}</p>
-      </div>
-      <div onClick={() => handleClick()} className="card ">
-        <div>
-          <img src={listOfProjects[1].image} alt="project" />
-          <h1 className="text-2xl font-bold text-center">
-            {listOfProjects[1].name}
-          </h1>
-        </div>
-        <p className="text-center">{listOfProjects[1].description}</p>
-      </div>
-      <div onClick={() => handleClick()} className="card ">
-        <div>
-          <img src={listOfProjects[2].image} alt="project" />
-          <h1 className="text-2xl font-bold text-center">
-            {listOfProjects[2].name}
-          </h1>
-        </div>
-        <p className="text-center">{listOfProjects[2].description}</p>
-      </div>
-      <div onClick={() => handleClick()} className="card ">
-        <div>
-          <img src={listOfProjects[3].image} alt="project" />
-          <h1 className="text-2xl font-bold text-center">
-            {listOfProjects[3].name}
-          </h1>
-        </div>
-        <p className="text-center">{listOfProjects[3].description}</p>
-      </div>
-      <div onClick={() => handleClick()} className="card ">
-        <div>
-          <img src={listOfProjects[4].image} alt="project" />
-          <h1 className="text-2xl font-bold text-center">
-            {listOfProjects[4].name}
-          </h1>
-        </div>
-        <p className="text-center">{listOfProjects[4].description}</p>
-      </div>
-      <div onClick={() => handleClick()} className="card ">
-        <div>
-          <img src={listOfProjects[5].image} alt="project" />
-          <h1 className="text-2xl font-bold text-center">
-            {listOfProjects[5].name}
-          </h1>
-        </div>
-        <p className="text-center">{listOfProjects[5].description}</p>
-      </div>
-      <div onClick={() => handleClick()} className="card ">
-        <div>
-          <img src={listOfProjects[6].image} alt="project" />
-          <h1 className="text-2xl font-bold text-center">
-            {listOfProjects[6].name}
-          </h1>
-        </div>
-        <p className="text-center">{listOfProjects[6].description}</p>
-      </div>
-      <div onClick={() => handleClick()} className="card ">
-        <a href="#project">
-          <div>
-            <img src={listOfProjects[7].image} alt="project" />
+    <div className={`bg-red-100 h-[102rem] md:h-screen w-screen flex justify-center items-center `}>
+      <section id="project" className="container mx-auto">
+        <div onClick={handleClick} className="card inactive">
+          <div className="">
+            <img src={listOfProjects[0].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
-              {listOfProjects[7].name}
+              {listOfProjects[0].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[7].description}</p>
-        </a>
-      </div>
-      {/* <div className='card' onClick={() =>handleClick(0)} >test</div>
-    <div className='card' onClick={() =>handleClick(1)}>test1</div>
-    <div className='card' onClick={() =>handleClick(3)}>test2</div>
-    <div className='card' onClick={() =>handleClick(4)} >test3</div> */}
-    </section>
+          <p className="text-center">{listOfProjects[0].description}</p>
+        </div>
+        <div onClick={handleClick} className="card inactive">
+          <div>
+            <img src={listOfProjects[1].image} alt="project" />
+            <h1 className="text-2xl font-bold text-center">
+              {listOfProjects[1].name}
+            </h1>
+          </div>
+          <p className="text-center">{listOfProjects[1].description}</p>
+        </div>
+        <div onClick={handleClick} className="card inactive">
+          <div>
+            <img src={listOfProjects[2].image} alt="project" />
+            <h1 className="text-2xl font-bold text-center">
+              {listOfProjects[2].name}
+            </h1>
+          </div>
+          <p className="text-center">{listOfProjects[2].description}</p>
+        </div>
+        <div onClick={handleClick} className="card inactive">
+          <div>
+            <img src={listOfProjects[3].image} alt="project" />
+            <h1 className="text-2xl font-bold text-center">
+              {listOfProjects[3].name}
+            </h1>
+          </div>
+          <p className="text-center">{listOfProjects[3].description}</p>
+        </div>
+        <div onClick={handleClick} className="card inactive">
+          <div>
+            <img src={listOfProjects[4].image} alt="project" />
+            <h1 className="text-2xl font-bold text-center">
+              {listOfProjects[4].name}
+            </h1>
+          </div>
+          <p className="text-center">{listOfProjects[4].description}</p>
+        </div>
+        <div onClick={handleClick} className="card inactive">
+          <div>
+            <img src={listOfProjects[5].image} alt="project" />
+            <h1 className="text-2xl font-bold text-center">
+              {listOfProjects[5].name}
+            </h1>
+          </div>
+          <p className="text-center">{listOfProjects[5].description}</p>
+        </div>
+        <div onClick={handleClick} className="card inactive">
+          <div>
+            <img src={listOfProjects[6].image} alt="project" />
+            <h1 className="text-2xl font-bold text-center">
+              {listOfProjects[6].name}
+            </h1>
+          </div>
+          <p className="text-center">{listOfProjects[6].description}</p>
+        </div>
+        <div onClick={handleClick} className="card inactive">
+          <a href="#project">
+            <div>
+              <img src={listOfProjects[7].image} alt="project" />
+              <h1 className="text-2xl font-bold text-center">
+                {listOfProjects[7].name}
+              </h1>
+            </div>
+            <p className="text-center">{listOfProjects[7].description}</p>
+          </a>
+        </div>
+
+      </section>
+    </div>
   );
 };
 export default Project;
