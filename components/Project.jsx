@@ -117,7 +117,7 @@ const Project = () => {
             <p className="text-center">{listOfProjects[0].description} </p>
             <a
               href={`${listOfProjects[0].link}`}
-              target="_blank"
+              target="_blank" rel="noreferrer" 
               className={`${theHref}`}
             >
               Show On Github
@@ -135,7 +135,7 @@ const Project = () => {
             <p className="text-center">{listOfProjects[1].description} </p>
             <a
               href={`${listOfProjects[1].link}`}
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className={`${theHref}`}
             >
               Show On Github
@@ -153,7 +153,7 @@ const Project = () => {
             <p className="text-center">{listOfProjects[2].description} </p>
             <a
               href={`${listOfProjects[2].link}`}
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className={`${theHref}`}
             >
               Show On Github
@@ -171,7 +171,7 @@ const Project = () => {
             <p className="text-center">{listOfProjects[3].description} </p>
             <a
               href={`${listOfProjects[3].link}`}
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className={`${theHref}`}
             >
               Show On Github
@@ -189,7 +189,7 @@ const Project = () => {
             <p className="text-center">{listOfProjects[4].description} </p>
             <a
               href={`${listOfProjects[4].link}`}
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className={`${theHref}`}
             >
               Show On Github
@@ -207,7 +207,7 @@ const Project = () => {
             <p className="text-center">{listOfProjects[5].description} </p>
             <a
               href={`${listOfProjects[5].link}`}
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className={`${theHref}`}
             >
               Show On Github
@@ -225,7 +225,7 @@ const Project = () => {
             <p className="text-center">{listOfProjects[6].description} </p>
             <a
               href={`${listOfProjects[6].link}`}
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className={`${theHref}`}
             >
               Show On Github
