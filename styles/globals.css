@@ -59,7 +59,7 @@
         justify-content: center;
         align-items: center;
         background: #95a9ff;
-        grid-column: span 2;
+        grid-column: span 3;
         font-size: 1.2rem;
         padding: 5rem;
         box-shadow: 0.7rem 0.7rem 0 black;
@@ -67,12 +67,11 @@
         gap: 2rem;
         /* transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s; */
     }
-    .card.active {
-        flex-direction: row;
+    .card.active { 
         grid-column: 1 / span 6;
         grid-row: 1 ;
         order: 0;
-        height: fit-content;
+        height: auto;
     }
 
     .card p {
@@ -92,11 +91,11 @@
         height: 200px;
         width: 400px;
     }
-    /* .card.inactive {
+    .card.inactive {
         grid-column: span 2;
-    } */
-    @media only screen and (max-width: 767px) {
+    }
+    /* @media only screen and (max-width: 767px) {
         .card {
             grid-column: span 3;
         }
-      }
+      } */

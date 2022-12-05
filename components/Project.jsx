@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { motion as m } from "framer-motion";
 import Lottie from "react-lottie";
-import { gsap } from "gsap/dist/gsap";
+import { gsap } from "gsap";
 import { Flip } from "gsap/dist/Flip";
 
 gsap.registerPlugin(Flip);
@@ -85,29 +85,27 @@ const listOfProjects = [
   },
 ];
 
-// const activClass = "card grid grid-cols-1 grid-rows-1 gap-4 order-none h-auto";
-// const inactiveClass = "card col-span-2 row-span-2 order-1 h-100% ";
 const Project = () => {
-
   const CardsRef = useRef(null);
-  
   const handleClick = (e) => {
     const card = e.currentTarget;
-    
+
     console.log("clicked");
-    
+
     const state = Flip.getState(CardsRef.current);
     const isCardActive = card.classList.contains("active");
-
+    console.log(CardsRef.current);
     CardsRef.current.forEach((otherCard, otherIndex) => {
       otherCard.classList.remove("active");
       otherCard.classList.remove("inactive");
       if (!isCardActive && card !== otherCard) {
         card.classList.add("inactive");
+        card.classList.remove("active");
       }
     });
     if (!isCardActive) {
       card.classList.add("active");
+      card.classList.remove("inactive");
     }
     Flip.from(state, { duration: 1, ease: "expo.out", absolute: true });
   };
@@ -117,9 +115,12 @@ const Project = () => {
   }, []);
 
   return (
-    <div id="projects" className={`bg-red-100 h-[110rem] md:h-screen w-screen flex justify-center items-center `}>
-      <section  data-aos="zoom-in"  className="container mx-auto">
-        <div onClick={handleClick} className="card inactive">
+    <div
+      id="projects"
+      className={`bg-red-100 h-[110rem] w-screen flex justify-center items-center `}
+    >
+      <section data-aos="zoom-in" className="container mx-auto">
+        <div onClick={handleClick} className="card ">
           <div className="">
             <img src={listOfProjects[0].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
@@ -128,7 +129,7 @@ const Project = () => {
           </div>
           <p className="text-center">{listOfProjects[0].description}</p>
         </div>
-        <div onClick={handleClick} className="card inactive">
+        <div onClick={handleClick} className="card ">
           <div>
             <img src={listOfProjects[1].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
@@ -137,7 +138,7 @@ const Project = () => {
           </div>
           <p className="text-center">{listOfProjects[1].description}</p>
         </div>
-        <div onClick={handleClick} className="card inactive">
+        <div onClick={handleClick} className="card ">
           <div>
             <img src={listOfProjects[2].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
@@ -146,7 +147,7 @@ const Project = () => {
           </div>
           <p className="text-center">{listOfProjects[2].description}</p>
         </div>
-        <div onClick={handleClick} className="card inactive">
+        <div onClick={handleClick} className="card ">
           <div>
             <img src={listOfProjects[3].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
@@ -155,7 +156,7 @@ const Project = () => {
           </div>
           <p className="text-center">{listOfProjects[3].description}</p>
         </div>
-        <div onClick={handleClick} className="card inactive">
+        <div onClick={handleClick} className="card ">
           <div>
             <img src={listOfProjects[4].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
@@ -164,7 +165,7 @@ const Project = () => {
           </div>
           <p className="text-center">{listOfProjects[4].description}</p>
         </div>
-        <div onClick={handleClick} className="card inactive">
+        <div onClick={handleClick} className="card ">
           <div>
             <img src={listOfProjects[5].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
@@ -173,7 +174,7 @@ const Project = () => {
           </div>
           <p className="text-center">{listOfProjects[5].description}</p>
         </div>
-        <div onClick={handleClick} className="card inactive">
+        <div onClick={handleClick} className="card ">
           <div>
             <img src={listOfProjects[6].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
@@ -182,7 +183,7 @@ const Project = () => {
           </div>
           <p className="text-center">{listOfProjects[6].description}</p>
         </div>
-        <div onClick={handleClick} className="card inactive">
+        <div onClick={handleClick} className="card ">
           <a href="#project">
             <div>
               <img src={listOfProjects[7].image} alt="project" />
@@ -193,7 +194,6 @@ const Project = () => {
             <p className="text-center">{listOfProjects[7].description}</p>
           </a>
         </div>
-
       </section>
     </div>
   );

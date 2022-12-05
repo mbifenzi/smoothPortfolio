@@ -3,8 +3,6 @@ import React from 'react'
 import animationData from "../assets/lottie/contact.json";
 import Lottie from "react-lottie";
 
-
-
 function CoronaVirus() {
   const defaultOptions = {
     loop: true,
