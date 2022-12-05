@@ -12,7 +12,7 @@ const listOfProjects = [
     description:
       "I reimplemented some C++ std containers using dynamic array and red black tree.",
     image: "/assets/projects/containers.jpeg",
-    link: "",
+    link: "https://github.com/mbifenzi/ft_containers",
     github: "",
     technologies: ["C++", "DATA STRUCTURE", "ALGORITHM"],
   },
@@ -21,7 +21,7 @@ const listOfProjects = [
     name: "Cub3D",
     description: "This is my first raycasting project, I made it with C",
     image: "/assets/projects/cub3d.png",
-    link: "",
+    link: "https://github.com/mbifenzi/cub3d",
     github: "",
     technologies: ["C", "Minilibx"],
   },
@@ -31,7 +31,7 @@ const listOfProjects = [
     description:
       "I Set up a small infrastructure composed of WordPress with LEMP Stack, (Nginx, MariaDB and PHP) using Docker / Docker-Compose.",
     image: "/assets/projects/inception.jpeg",
-    link: "",
+    link: "https://github.com/mbifenzi/inception",
     github: "",
     technologies: ["Docker", "Docker-Compose"],
   },
@@ -40,7 +40,7 @@ const listOfProjects = [
     name: "MiniShell",
     description: "This is a simple shell implementation, I made it with C",
     image: "/assets/projects/minishell.png",
-    link: "",
+    link: "https://github.com/mbifenzi/minishell",
     github: "",
     technologies: ["C", "UNIX"],
   },
@@ -49,7 +49,7 @@ const listOfProjects = [
     name: "Push_swap",
     description: "This is a sorting algorithm project, I made it with C",
     image: "/assets/projects/pushswap.png",
-    link: "",
+    link: "https://github.com/mbifenzi/push_swap",
     github: "",
     technologies: ["C", "Sorting Algorithms"],
   },
@@ -59,7 +59,7 @@ const listOfProjects = [
     description:
       "A three man project. We wrote our own Http server form scratch using C++.",
     image: "/assets/projects/webserv.jpeg",
-    link: "",
+    link: "https://github.com/mbifenzi/webserv",
     github: "",
     technologies: ["C++", "SOCKETS"],
   },
@@ -69,9 +69,9 @@ const listOfProjects = [
     description:
       "A 42 project. We wrote a full stack web application using ReactJS, NestJS, and PostgreSQL.",
     image: "/assets/projects/ft-transcandante.png",
-    link: "",
+    link: "https://github.com/mbifenzi/ft-transgender",
     github: "",
-    technologies: ["React", "Node.js", "PostgreSQL", "TypeScript", "Socket.io"],
+    technologies: ["ReactJS", "NestJS", "PostgreSQL", "TypeScript", "Socket.io"],
   },
 ];
 const theHref =
@@ -116,7 +116,7 @@ const Project = () => {
           <div className="flex  flex-col justify-around h-3/4 items-center ">
             <p className="text-center">{listOfProjects[0].description} </p>
             <a
-              href="{listOfProjects[0].link}"
+              href={`${listOfProjects[0].link}`}
               target="_blank"
               className={`${theHref}`}
             >
@@ -134,7 +134,7 @@ const Project = () => {
           <div className="flex  flex-col justify-around h-3/4 items-center">
             <p className="text-center">{listOfProjects[1].description} </p>
             <a
-              href="{listOfProjects[1].link}"
+              href={`${listOfProjects[1].link}`}
               target="_blank"
               className={`${theHref}`}
             >
@@ -152,7 +152,7 @@ const Project = () => {
           <div className="flex  flex-col justify-around h-3/4 items-center">
             <p className="text-center">{listOfProjects[2].description} </p>
             <a
-              href="{listOfProjects[2].link}"
+              href={`${listOfProjects[2].link}`}
               target="_blank"
               className={`${theHref}`}
             >
@@ -170,7 +170,7 @@ const Project = () => {
           <div className="flex  flex-col justify-around h-3/4 items-center">
             <p className="text-center">{listOfProjects[3].description} </p>
             <a
-              href="{listOfProjects[3].link}"
+              href={`${listOfProjects[3].link}`}
               target="_blank"
               className={`${theHref}`}
             >
@@ -188,7 +188,7 @@ const Project = () => {
           <div className="flex  flex-col justify-around h-3/4 items-center">
             <p className="text-center">{listOfProjects[4].description} </p>
             <a
-              href="{listOfProjects[4].link}"
+              href={`${listOfProjects[4].link}`}
               target="_blank"
               className={`${theHref}`}
             >
@@ -206,7 +206,7 @@ const Project = () => {
           <div className="flex  flex-col justify-around h-3/4 items-center">
             <p className="text-center">{listOfProjects[5].description} </p>
             <a
-              href="{listOfProjects[5].link}"
+              href={`${listOfProjects[5].link}`}
               target="_blank"
               className={`${theHref}`}
             >
@@ -224,7 +224,7 @@ const Project = () => {
           <div className="flex  flex-col justify-around h-3/4 items-center">
             <p className="text-center">{listOfProjects[6].description} </p>
             <a
-              href="{listOfProjects[6].link}"
+              href={`${listOfProjects[6].link}`}
               target="_blank"
               className={`${theHref}`}
             >
