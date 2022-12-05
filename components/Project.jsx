@@ -8,7 +8,7 @@ gsap.registerPlugin(Flip);
 const listOfProjects = [
   {
     id: 1,
-    name: "ft-containers",
+    name: "Ft-Containers",
     description:
       "I reimplemented some C++ std containers using dynamic array and red black tree.",
     image: "/assets/projects/containers.jpeg",
@@ -27,9 +27,9 @@ const listOfProjects = [
   },
   {
     id: 3,
-    name: "inception",
+    name: "Inception",
     description:
-      "i Set up a small infrastructure composed of WordPress with LEMP Stack, (Nginx, MariaDB and PHP) using Docker / Docker-Compose.",
+      "I Set up a small infrastructure composed of WordPress with LEMP Stack, (Nginx, MariaDB and PHP) using Docker / Docker-Compose.",
     image: "/assets/projects/inception.jpeg",
     link: "",
     github: "",
@@ -38,7 +38,7 @@ const listOfProjects = [
   {
     id: 4,
     name: "MiniShell",
-    description: "this is a simple shell implementation, I made it with C",
+    description: "This is a simple shell implementation, I made it with C",
     image: "/assets/projects/minishell.png",
     link: "",
     github: "",
@@ -65,69 +65,64 @@ const listOfProjects = [
   },
   {
     id: 7,
-    name: "ft-transcendence",
+    name: "Ft-Transcendence",
     description:
-      "A 42 project. We wrote a full stack web application using React, Node.js, and PostgreSQL.",
+      "A 42 project. We wrote a full stack web application using ReactJS, NestJS, and PostgreSQL.",
     image: "/assets/projects/ft-transcandante.png",
     link: "",
     github: "",
     technologies: ["React", "Node.js", "PostgreSQL", "TypeScript", "Socket.io"],
   },
-  {
-    id: 8,
-    name: "Philosophers",
-    description:
-      "Three different implementation of the famous dining philosophers problem using mutex and threads",
-    image: "/assets/projects/philo.webp",
-    link: "",
-    github: "",
-    technologies: ["C", "Threads", "Mutex"],
-  },
 ];
-
+const theHref =
+  "text-center border-black rounded-lg border-4 bg-slate-300 hover:bg-slate-400 transition duration-300 w-[10em]";
 const Project = () => {
-  const CardsRef = useRef(null);
   const handleClick = (e) => {
+    const Cards = document.querySelectorAll(".card");
     const card = e.currentTarget;
+    console.log(card);
 
-    console.log("clicked");
-
-    const state = Flip.getState(CardsRef.current);
+    const state = Flip.getState(Cards);
     const isCardActive = card.classList.contains("active");
-    console.log(CardsRef.current);
-    CardsRef.current.forEach((otherCard, otherIndex) => {
+
+    Cards.forEach((otherCard, otherIndex) => {
       otherCard.classList.remove("active");
       otherCard.classList.remove("inactive");
       if (!isCardActive && card !== otherCard) {
-        card.classList.add("inactive");
-        card.classList.remove("active");
+        otherCard.classList.add("inactive");
       }
     });
     if (!isCardActive) {
       card.classList.add("active");
-      card.classList.remove("inactive");
+
     }
     Flip.from(state, { duration: 1, ease: "expo.out", absolute: true });
   };
 
   useEffect(() => {
-    CardsRef.current = document.querySelectorAll(".card");
+    // Cards = document.querySelectorAll(".card");
   }, []);
 
   return (
-    <div
-      id="projects"
-      className={`bg-red-100 h-[110rem] w-screen flex justify-center items-center `}
-    >
-      <section data-aos="zoom-in" className="container mx-auto">
-        <div onClick={handleClick} className="card ">
+    <div id="projects" className="bg-red-100 md:h-[90em] h-[110em] w-screen">
+      <section data-aos="zoom-in" className="container h-4/5 mx-auto pt-10">
+        <div onClick={handleClick} className="card">
           <div className="">
             <img src={listOfProjects[0].image} alt="project" />
             <h1 className="text-2xl font-bold text-center">
               {listOfProjects[0].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[0].description}</p>
+          <div className="flex  flex-col justify-around h-3/4 items-center ">
+            <p className="text-center">{listOfProjects[0].description} </p>
+            <a
+              href="{listOfProjects[0].link}"
+              target="_blank"
+              className={`${theHref}`}
+            >
+              Show On Github
+            </a>
+          </div>
         </div>
         <div onClick={handleClick} className="card ">
           <div>
@@ -136,7 +131,16 @@ const Project = () => {
               {listOfProjects[1].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[1].description}</p>
+          <div className="flex  flex-col justify-around h-3/4 items-center">
+            <p className="text-center">{listOfProjects[1].description} </p>
+            <a
+              href="{listOfProjects[1].link}"
+              target="_blank"
+              className={`${theHref}`}
+            >
+              Show On Github
+            </a>
+          </div>
         </div>
         <div onClick={handleClick} className="card ">
           <div>
@@ -145,7 +149,16 @@ const Project = () => {
               {listOfProjects[2].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[2].description}</p>
+          <div className="flex  flex-col justify-around h-3/4 items-center">
+            <p className="text-center">{listOfProjects[2].description} </p>
+            <a
+              href="{listOfProjects[2].link}"
+              target="_blank"
+              className={`${theHref}`}
+            >
+              Show On Github
+            </a>
+          </div>
         </div>
         <div onClick={handleClick} className="card ">
           <div>
@@ -154,7 +167,16 @@ const Project = () => {
               {listOfProjects[3].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[3].description}</p>
+          <div className="flex  flex-col justify-around h-3/4 items-center">
+            <p className="text-center">{listOfProjects[3].description} </p>
+            <a
+              href="{listOfProjects[3].link}"
+              target="_blank"
+              className={`${theHref}`}
+            >
+              Show On Github
+            </a>
+          </div>
         </div>
         <div onClick={handleClick} className="card ">
           <div>
@@ -163,7 +185,16 @@ const Project = () => {
               {listOfProjects[4].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[4].description}</p>
+          <div className="flex  flex-col justify-around h-3/4 items-center">
+            <p className="text-center">{listOfProjects[4].description} </p>
+            <a
+              href="{listOfProjects[4].link}"
+              target="_blank"
+              className={`${theHref}`}
+            >
+              Show On Github
+            </a>
+          </div>
         </div>
         <div onClick={handleClick} className="card ">
           <div>
@@ -172,7 +203,16 @@ const Project = () => {
               {listOfProjects[5].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[5].description}</p>
+          <div className="flex  flex-col justify-around h-3/4 items-center">
+            <p className="text-center">{listOfProjects[5].description} </p>
+            <a
+              href="{listOfProjects[5].link}"
+              target="_blank"
+              className={`${theHref}`}
+            >
+              Show On Github
+            </a>
+          </div>
         </div>
         <div onClick={handleClick} className="card ">
           <div>
@@ -181,18 +221,16 @@ const Project = () => {
               {listOfProjects[6].name}
             </h1>
           </div>
-          <p className="text-center">{listOfProjects[6].description}</p>
-        </div>
-        <div onClick={handleClick} className="card ">
-          <a href="#project">
-            <div>
-              <img src={listOfProjects[7].image} alt="project" />
-              <h1 className="text-2xl font-bold text-center">
-                {listOfProjects[7].name}
-              </h1>
-            </div>
-            <p className="text-center">{listOfProjects[7].description}</p>
-          </a>
+          <div className="flex  flex-col justify-around h-3/4 items-center">
+            <p className="text-center">{listOfProjects[6].description} </p>
+            <a
+              href="{listOfProjects[6].link}"
+              target="_blank"
+              className={`${theHref}`}
+            >
+              Show On Github
+            </a>
+          </div>
         </div>
       </section>
     </div>

@@ -55,11 +55,11 @@
         border-radius: 1rem;
         cursor: pointer;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         background: #95a9ff;
-        grid-column: span 3;
+        grid-column: span 2;
         font-size: 1.2rem;
         padding: 5rem;
         box-shadow: 0.7rem 0.7rem 0 black;
@@ -77,8 +77,14 @@
     .card p {
         display: none;
     }
+    .card a {
+        display: none;
+    }
 
     .card.active p{
+        display: block;
+    }
+    .card.active a{
         display: block;
     }
 
@@ -88,14 +94,24 @@
     }
     .card.active img {
         display: block;
-        height: 200px;
-        width: 400px;
+        height: 13em;
+
     }
     .card.inactive {
         grid-column: span 2;
     }
-    /* @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 767px) {
         .card {
             grid-column: span 3;
         }
-      } */
+      }
+    @media only screen and (max-width: 767px) {
+        .card.inactive {
+            grid-column: span 3;
+        }
+      }
+    @media only screen and (max-width: 767px) {
+        .card.active {
+            grid-column: 1 / span 6;
+        }
+      }
