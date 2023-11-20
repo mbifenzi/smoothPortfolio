@@ -22,12 +22,12 @@ function CoronaVirus() {
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full h-fit sm:h-screen bg-slate-200">
+    <div id="contact" className="w-full min-h-screen h-fit bg-slate-200">
       <div className="container mx-auto flex h-full flex-col justify-around align-start">
         <div className="flex justify-center items-center w-full" data-aos="zoom-in">
           <CoronaVirus />
         </div>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row h-full">
           <h1  className="text-[150px] sm:text-[200px] font-bold font-[bifHeader] leading-tight " data-aos="fade-right">
             LET&apos;S <br /> CONNECT
           </h1>
